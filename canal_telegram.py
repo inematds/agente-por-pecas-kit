@@ -44,6 +44,11 @@ while True:
             telegram("sendMessage", chat_id=msg["chat"]["id"], text="Olá! Sou o seu agente. Mande um pedido.")
             print("[telegram] boas-vindas enviadas", flush=True)
             continue
+        dono = os.environ.get("TELEGRAM_DONO", "")
+        if dono and str(msg["chat"]["id"]) != dono:           # regra 3: só o dono é atendido
+            print("[regras] não é o dono: não atendo", flush=True)
+            telegram("sendMessage", chat_id=msg["chat"]["id"], text="Este agente só atende o dono.")
+            continue
         resposta = caixa.atender(msg["text"], canal="telegram")
         telegram("sendMessage", chat_id=msg["chat"]["id"], text=resposta or "(sem resposta)")
         print("[telegram] resposta enviada", flush=True)
