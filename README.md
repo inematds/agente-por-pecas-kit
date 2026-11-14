@@ -1,0 +1,41 @@
+# agente-por-pecas-kit
+
+O kit do curso **Agente por peças** (INEMA): um agente de IA montado peça por peça, onde cada peça é um arquivo.
+
+```
+CANAL ──pedido──▶ CAIXA ──é exato?──▶ RECEITA (sem cérebro)
+(terminal, chat,    │ não
+ Telegram, pasta)   ▼
+                  CÉREBRO (Codex) ──pede──▶ FERRAMENTAS
+                    │   ▲ memória e regras
+                    ▼
+                  VERIFICADOR ──▶ sucesso · tentar de novo · cancelar
+```
+
+| Peça | Arquivo |
+|---|---|
+| Canal | `canal_terminal.py`, `canal_web.py` + `chat.html`, `canal_telegram.py`, `canal_pasta.py` |
+| Caixa (a rotina) | `caixa.py` |
+| Cérebro | `cerebro.py` (Codex da assinatura) · `cerebro_local.py` (Ollama, módulo à parte: `CEREBRO=local`) |
+| Receitas (RPA) | `receitas.py` + `receitas/*.txt` |
+| Ferramentas | `ferramentas.py` |
+| Memória | `memoria.json` (nasce quando o agente lembra a primeira coisa) |
+| Regras | `regras.md` + as travas dentro de `ferramentas.py` |
+| Verificador e loop | `verificador.py` + o laço em `caixa.py` |
+
+Cada aula do curso é uma tag: `git checkout aula2` … `git checkout aula8`.
+
+## O processo, do início ao fim
+
+1. 🧠 Instalar o Codex e entrar com a assinatura: `npm i -g @openai/codex && codex login`.
+2. 🧠 Baixar o kit: `git clone https://github.com/inematds/agente-por-pecas-kit && cd agente-por-pecas-kit`.
+3. ⚙️ Aula 2 (caixa e cérebro): `git checkout aula2 && python3 canal_terminal.py "seu pedido"`.
+4. ⚙️ Aula 3 (chat): `git checkout aula3 && python3 canal_web.py` e abrir o endereço que aparece.
+5. 🧠 Aula 4 (Telegram): criar o bot no @BotFather, gravar `TELEGRAM_TOKEN=...` no `.env`, `python3 canal_telegram.py`.
+6. ⚙️ Aula 5 (pasta): `git checkout aula5 && python3 canal_pasta.py` e deixar arquivos `.txt` em `entrada/`.
+7. ⚙️ Aula 6 (receitas e ferramentas): `git checkout aula6`, pedidos exatos vão para `receitas/`.
+8. ⚙️ Aula 7 (memória e regras): `git checkout aula7`; no Telegram, `TELEGRAM_DONO=<seu chat>` no `.env`.
+9. ⚙️ Aula 8 (verificador e loop): `git checkout aula8 && python3 canal_terminal.py "pedido" --esperado "o que tem de aparecer"`.
+10. ⚙️ Testes sem modelo: `python3 -m pytest -q testes/`.
+
+O token do bot fica só no `.env` (fora do git). O Codex roda numa pasta vazia, em modo só leitura: quem mexe em arquivo é a caixa, pelas ferramentas.
