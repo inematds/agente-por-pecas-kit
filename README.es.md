@@ -13,6 +13,8 @@ Este es el kit del curso gratuito **Agente por piezas** (en portugués): un agen
 Guía completa (landing + paso a paso): **https://inematds.github.io/agente-por-pecas-kit/guia/es/**
 Curso gratuito (en portugués): **https://inematds.github.io/agente-por-pecas-v73/**
 
+🎬 Video (en portugués): https://www.youtube.com/watch?v=pWXLBVyJd1Y
+
 El kit del curso **Agente por piezas** (INEMA): un agente de IA armado pieza por pieza, donde cada pieza es un archivo.
 
 ```

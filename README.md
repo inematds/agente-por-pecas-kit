@@ -13,6 +13,8 @@ Este é o kit do curso grátis **Agente por peças**: um agente de IA pequeno, e
 Guia completo (landing + passo a passo): **https://inematds.github.io/agente-por-pecas-kit/guia/**
 Curso grátis: **https://inematds.github.io/agente-por-pecas-v73/**
 
+🎬 Vídeo: https://www.youtube.com/watch?v=pWXLBVyJd1Y
+
 O kit do curso **Agente por peças** (INEMA): um agente de IA montado peça por peça, onde cada peça é um arquivo.
 
 ```

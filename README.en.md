@@ -13,6 +13,8 @@ This is the kit for the free course **Agent by pieces**: a small AI agent in pla
 Full guide (landing + step by step): **https://inematds.github.io/agente-por-pecas-kit/guia/en/**
 Free course (in Portuguese): **https://inematds.github.io/agente-por-pecas-v73/**
 
+🎬 Video (in Portuguese): https://www.youtube.com/watch?v=pWXLBVyJd1Y
+
 The kit for the course **Agent by pieces** (INEMA): an AI agent built piece by piece, where each piece is a file.
 
 ```
