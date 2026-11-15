@@ -1,5 +1,18 @@
 # agente-por-pecas-kit
 
+[![Agente por peças](guia/assets/banner.jpg)](https://inematds.github.io/agente-por-pecas-kit/guia/)
+
+**🇧🇷 [Português](README.md) · 🇺🇸 [English](README.en.md) · 🇪🇸 [Español](README.es.md)**
+
+## O que é
+
+Este é o kit do curso grátis **Agente por peças**: um agente de IA pequeno, em Python puro, em que cada peça é um arquivo que você abre e lê. Serve para quem já usa o ChatGPT ou o Claude e quer ver por dentro como um agente recebe um pedido, faz a tarefa e confere o resultado. O cérebro é o Codex da sua assinatura do ChatGPT, sem chave de API (ou um modelo no seu computador, se você preferir). Para usar, você precisa de um terminal, do Python 3 e do Codex instalado; o curso ensina o resto, uma aula por vez.
+
+## 📖 Guia de uso
+
+Guia completo (landing + passo a passo): **https://inematds.github.io/agente-por-pecas-kit/guia/**
+Curso grátis: **https://inematds.github.io/agente-por-pecas-v73/**
+
 O kit do curso **Agente por peças** (INEMA): um agente de IA montado peça por peça, onde cada peça é um arquivo.
 
 ```
